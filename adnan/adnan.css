@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+body {
+  max-width: 1440px;
+}
+
+.container-fluid {
+  height: 100vh;
+  background-image: url("https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111-1500x1000.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 80%;
+  height: 80%;
+  display: grid;
+}
+
+.box-row .col-md-4 {
+  background-image: url("https://w0.peakpx.com/wallpaper/793/973/HD-wallpaper-portrait-display-sky-clouds-sunset.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title {
+  font-family: "Permanent Marker", cursive;
+  margin-top: 50px;
+}
+
+.box-row .top {
+  margin: 50px 2vw;
+}
+
+.box-row .bot {
+  padding-top: 20px;
+  height: 50%;
+}

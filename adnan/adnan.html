@@ -17,6 +17,49 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <link rel="stylesheet" href="adnan.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container-fluid">
+      <div class="box bg-dark">
+        <div class="row box-row m-0">
+          <div class="col-md-4">
+            <h1 class="title text-light text-center">RAMALAN CUACA</h1>
+          </div>
+          <div class="col-md-8">
+            <div class="top">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2 p-2"
+                  id="input"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-light" type="submit" id="button">
+                  Search
+                </button>
+              </form>
+            </div>
+            <div class="bot d-flex justify-content-center align-items-center">
+              <div class="bot-data">
+                <h1 class="text-light mb-4">
+                  City : <span id="city">city</span>
+                </h1>
+                <h4 class="text-light">
+                  Conditions : <span id="conditions">conditions</span>
+                </h4>
+                <h4 class="text-light">
+                  Temperature : <span id="temperature">temperature</span> C
+                </h4>
+                <h4 class="text-light">
+                  Wind Speed : <span id="windspeed">windspeed</span> km/h
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
