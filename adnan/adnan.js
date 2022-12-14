@@ -6,8 +6,8 @@ const windSpeed = document.querySelector("#windspeed");
 const input = document.querySelector("#input");
 const button = document.querySelector("#button");
 
-async function weather(event) {
-  const BASE_URL = "https://aerisweather1.p.rapidapi.com/forecasts/cairo,eg";
+async function weather() {
+  const BASE_URL = `https://aerisweather1.p.rapidapi.com/forecasts/${input.value}`;
 
   const options = {
     method: "GET",
@@ -31,19 +31,9 @@ async function weather(event) {
     temperature.innerText = dataResponse.periods[0].avgTempC + " C";
     windSpeed.innerText = dataResponse.periods[0].windSpeedKPH + " kmh";
   }
-
-  event.preventDefault();
 }
 
-console.log(weather());
-
-button.addEventListener("click", weather, false);
-
-// weather().catch((err) => console.log(err));
-
-// const coba = async () => {};
-
-// fetch("https://aerisweather1.p.rapidapi.com/forecasts/cairo,eg", options)
-//   .then((response) => response.json())
-//   .then((response) => console.log(response))
-//   .catch((err) => console.error(err));
+button.addEventListener("click", (event) => {
+  console.log(weather());
+  event.preventDefault();
+});
