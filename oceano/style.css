@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+body {
+  max-width: 1440px;
+  background-image: url("https://images.wallpaperscraft.com/image/single/autumn_forest_trees_129892_3840x2400.jpg");
+  background-color: bisque;
+}
+
+.container{
+    margin-top: 200px;
+    margin-left: 500px;
+}
+
+.card{
+    max-width: 1000px;
+    max-height: 700px;
+}
+
+.card-img{
+    max-width: 500px;
+}
+
+.card-img-overlay{
+    color: aliceblue;
+}
+
+.input-keyword{
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 450px;
+    height: 35px;
+    border-bottom: 2px rgb(161, 11, 11);
+    padding: none;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn{
+    height: 37px;
+    margin-top: -5px;
+}
+
+.hasilcari{
+    margin-top: 30px;
+}
