@@ -16,8 +16,6 @@ async function myFunction() {
   const response = await fetch(BASE_URL);
   const data = await response.json();
 
-  console.log(data);
-
   city.innerText = data.name;
   conditions.innerText = data.weather[0].description;
   temperature.innerText = data.main.temp + " C";
