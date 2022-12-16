@@ -1,0 +1,56 @@
+<style> @import url('https://fonts.googleapis.com/css2?family=Basic&family=Great+Vibes&display=swap'); </style>
+
+
+
+.temp {
+    border-radius: 10px;
+    color: #00ff00;
+    display: inline-block; 
+    padding: 5px 8px;
+}
+
+body {
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 100vh; 
+    overflow-y: hidden;
+    font-family: 'Basic', sans-serif;
+    font-family: 'Great Vibes', cursive;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(28, 24, 23);
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+    
+}
+
+.input-group {
+    padding-top: 5vw;
+    padding-left: 5vw;
+    
+}
+
+.form-control {
+    background: none;
+    border: none;
+    border-bottom: 1px #fff solid;
+    color: #00ff00;
+    outline: none;
+}
+
+.img-fluid {
+    width: 30vw;
+    height: 40vw;
+}
+
+.text {
+    position: absolute;
+    margin-top: 5vw;
+    color: #ffff;
+    margin-left: 2vw
+}
