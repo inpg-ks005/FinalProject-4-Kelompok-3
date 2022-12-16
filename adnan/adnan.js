@@ -6,34 +6,25 @@ const windSpeed = document.querySelector("#windspeed");
 const input = document.querySelector("#input");
 const button = document.querySelector("#button");
 
-async function weather() {
-  const BASE_URL = `https://aerisweather1.p.rapidapi.com/forecasts/${input.value}`;
-
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "3d917a946dmshff0081340c31504p13cc00jsn7aab6792fca6",
-      "X-RapidAPI-Host": "aerisweather1.p.rapidapi.com",
-    },
+async function myFunction() {
+  const weather = {
+    apiKey: "f3e751dcc8a8bf71bbe354f812e24bd4",
   };
 
-  const response = await fetch(BASE_URL, options);
+  const BASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${weather.apiKey}&units=metric`;
+
+  const response = await fetch(BASE_URL);
   const data = await response.json();
 
-  console.log(data.response);
+  console.log(data);
 
-  if (data.response.length) {
-    const dataResponse = data.response[0];
-
-    console.log(dataResponse);
-    city.innerText = dataResponse.place.name;
-    conditions.innerText = dataResponse.periods[0].weather;
-    temperature.innerText = dataResponse.periods[0].avgTempC + " C";
-    windSpeed.innerText = dataResponse.periods[0].windSpeedKPH + " kmh";
-  }
+  city.innerText = data.name;
+  conditions.innerText = data.weather[0].description;
+  temperature.innerText = data.main.temp + " C";
+  windSpeed.innerText = data.wind.speed + " ms";
 }
 
 button.addEventListener("click", (event) => {
-  console.log(weather());
+  console.log(myFunction());
   event.preventDefault();
 });
